@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1F1F1F"
+    android:padding="18dp">
+
+    <ImageView
+        android:id="@+id/teamImage"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/teamName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="start"
+        android:text="laliga"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/teamImage"
+        app:layout_constraintEnd_toStartOf="@+id/enter"
+        app:layout_constraintStart_toEndOf="@+id/teamImage"
+        app:layout_constraintTop_toTopOf="@+id/teamImage" />
+
+    <ImageView
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="spain"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/teamImage"
+        app:layout_constraintTop_toBottomOf="@+id/teamName" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#2B2B2B"
+        android:elevation="6dp"
+        app:cardCornerRadius="14dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/teamImage">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:visibility="gone"
+        app:lottie_rawRes="@raw/loading"
+        />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="14dp"
+
+            >
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/team1Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/team2Name"
+                app:layout_constraintStart_toEndOf="@+id/team1ScoreDec"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/team2Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/team3Name"
+                app:layout_constraintStart_toEndOf="@+id/team1Name"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/team3Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/team4Name"
+                app:layout_constraintStart_toEndOf="@+id/team2Name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/team4Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/team5Name"
+                app:layout_constraintStart_toEndOf="@+id/team3Name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/team5Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pts"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/team1Image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv" />
+
+            <TextView
+                android:id="@+id/team1ScoreDec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="manchester_united"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team1Image"
+                app:layout_constraintStart_toEndOf="@+id/team1Image"
+                app:layout_constraintTop_toTopOf="@+id/team1Image" />
+
+            <ImageView
+                android:id="@+id/team2Image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toTopOf="@+id/team3Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/team1Image" />
+
+            <TextView
+                android:id="@+id/team2ScoreDec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="manchester_united"
+
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team2Image"
+                app:layout_constraintStart_toEndOf="@+id/team1Image"
+                app:layout_constraintTop_toTopOf="@+id/team2Image" />
+
+            <ImageView
+                android:id="@+id/team3Image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toTopOf="@+id/team4Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/team2Image" />
+
+            <TextView
+                android:id="@+id/team3ScoreDec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="manchester_united"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team3Image"
+                app:layout_constraintStart_toEndOf="@+id/team1Image"
+                app:layout_constraintTop_toTopOf="@+id/team3Image" />
+
+            <ImageView
+                android:id="@+id/team4Image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toTopOf="@+id/team5Image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/team3Image" />
+
+            <TextView
+                android:id="@+id/team4ScoreDec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="manchester_united"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team4Image"
+                app:layout_constraintStart_toEndOf="@+id/team1Image"
+                app:layout_constraintTop_toTopOf="@+id/team4Image" />
+
+            <ImageView
+                android:id="@+id/team5Image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/team5ScoreDec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="manchester_united"
+                android:textColor="@color/white"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team5Image"
+                app:layout_constraintStart_toEndOf="@+id/team5Image"
+                app:layout_constraintTop_toTopOf="@+id/team5Image" />
+
+            <TextView
+                android:id="@+id/team1Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team1Image"
+                app:layout_constraintEnd_toEndOf="@id/team1Name"
+                app:layout_constraintStart_toStartOf="@+id/team1Name"
+                app:layout_constraintTop_toTopOf="@+id/team1Image" />
+
+            <TextView
+                android:id="@+id/team2Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team2Image"
+                app:layout_constraintEnd_toEndOf="@id/team1Name"
+                app:layout_constraintStart_toStartOf="@+id/team1Name"
+                app:layout_constraintTop_toTopOf="@+id/team2Image" />
+
+            <TextView
+                android:id="@+id/team3Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team3Image"
+                app:layout_constraintEnd_toEndOf="@id/team1Name"
+                app:layout_constraintStart_toStartOf="@+id/team1Name"
+                app:layout_constraintTop_toTopOf="@+id/team3Image" />
+
+            <TextView
+                android:id="@+id/team4Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team4Image"
+                app:layout_constraintEnd_toEndOf="@id/team1Name"
+                app:layout_constraintStart_toStartOf="@+id/team1Name"
+                app:layout_constraintTop_toTopOf="@+id/team4Image" />
+
+            <TextView
+                android:id="@+id/team5Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team5Image"
+                app:layout_constraintEnd_toEndOf="@id/team1Name"
+                app:layout_constraintStart_toStartOf="@+id/team1Name"
+                app:layout_constraintTop_toTopOf="@+id/team5Image" />
+
+            <TextView
+                android:id="@+id/team21Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team1Image"
+                app:layout_constraintEnd_toEndOf="@id/team2Name"
+                app:layout_constraintStart_toStartOf="@+id/team2Name"
+                app:layout_constraintTop_toTopOf="@+id/team1Image" />
+
+            <TextView
+                android:id="@+id/team22Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team2Image"
+                app:layout_constraintEnd_toEndOf="@id/team2Name"
+                app:layout_constraintStart_toStartOf="@+id/team2Name"
+                app:layout_constraintTop_toTopOf="@+id/team2Image" />
+
+            <TextView
+                android:id="@+id/team23Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team3Image"
+                app:layout_constraintEnd_toEndOf="@id/team2Name"
+                app:layout_constraintStart_toStartOf="@+id/team2Name"
+                app:layout_constraintTop_toTopOf="@+id/team3Image" />
+
+            <TextView
+                android:id="@+id/team24Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team4Image"
+                app:layout_constraintEnd_toEndOf="@id/team2Name"
+                app:layout_constraintStart_toStartOf="@+id/team2Name"
+                app:layout_constraintTop_toTopOf="@+id/team4Image" />
+
+            <TextView
+                android:id="@+id/team25Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team5Image"
+                app:layout_constraintEnd_toEndOf="@id/team2Name"
+                app:layout_constraintStart_toStartOf="@+id/team2Name"
+                app:layout_constraintTop_toTopOf="@+id/team5Image" />
+
+            <TextView
+                android:id="@+id/team31Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team1Image"
+                app:layout_constraintEnd_toEndOf="@id/team3Name"
+                app:layout_constraintStart_toStartOf="@+id/team3Name"
+                app:layout_constraintTop_toTopOf="@+id/team1Image" />
+
+            <TextView
+                android:id="@+id/team32Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team2Image"
+                app:layout_constraintEnd_toEndOf="@id/team3Name"
+                app:layout_constraintStart_toStartOf="@+id/team3Name"
+                app:layout_constraintTop_toTopOf="@+id/team2Image" />
+
+            <TextView
+                android:id="@+id/team33Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team3Image"
+                app:layout_constraintEnd_toEndOf="@id/team3Name"
+                app:layout_constraintStart_toStartOf="@+id/team3Name"
+                app:layout_constraintTop_toTopOf="@+id/team3Image" />
+
+            <TextView
+                android:id="@+id/team34Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team4Image"
+                app:layout_constraintEnd_toEndOf="@id/team3Name"
+                app:layout_constraintStart_toStartOf="@+id/team3Name"
+                app:layout_constraintTop_toTopOf="@+id/team4Image" />
+
+            <TextView
+                android:id="@+id/team35Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team5Image"
+                app:layout_constraintEnd_toEndOf="@id/team3Name"
+                app:layout_constraintStart_toStartOf="@+id/team3Name"
+                app:layout_constraintTop_toTopOf="@+id/team5Image" />
+
+            <TextView
+                android:id="@+id/team41Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team1Image"
+                app:layout_constraintEnd_toEndOf="@id/team4Name"
+                app:layout_constraintStart_toStartOf="@+id/team4Name"
+                app:layout_constraintTop_toTopOf="@+id/team1Image" />
+
+            <TextView
+                android:id="@+id/team42Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team2Image"
+                app:layout_constraintEnd_toEndOf="@id/team4Name"
+                app:layout_constraintStart_toStartOf="@+id/team4Name"
+                app:layout_constraintTop_toTopOf="@+id/team2Image" />
+
+            <TextView
+                android:id="@+id/team43Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team3Image"
+                app:layout_constraintEnd_toEndOf="@id/team4Name"
+                app:layout_constraintStart_toStartOf="@+id/team4Name"
+                app:layout_constraintTop_toTopOf="@+id/team3Image" />
+
+            <TextView
+                android:id="@+id/team44Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team4Image"
+                app:layout_constraintEnd_toEndOf="@id/team4Name"
+                app:layout_constraintStart_toStartOf="@+id/team4Name"
+                app:layout_constraintTop_toTopOf="@+id/team4Image" />
+
+            <TextView
+                android:id="@+id/team45Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team5Image"
+                app:layout_constraintEnd_toEndOf="@id/team4Name"
+                app:layout_constraintStart_toStartOf="@+id/team4Name"
+                app:layout_constraintTop_toTopOf="@+id/team5Image" />
+
+            <TextView
+                android:id="@+id/team51Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team1Image"
+                app:layout_constraintEnd_toEndOf="@id/team5Name"
+                app:layout_constraintStart_toStartOf="@+id/team5Name"
+                app:layout_constraintTop_toTopOf="@+id/team1Image" />
+
+            <TextView
+                android:id="@+id/team52Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team2Image"
+                app:layout_constraintEnd_toEndOf="@id/team5Name"
+                app:layout_constraintStart_toStartOf="@+id/team5Name"
+                app:layout_constraintTop_toTopOf="@+id/team2Image" />
+
+            <TextView
+                android:id="@+id/team53Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team3Image"
+                app:layout_constraintEnd_toEndOf="@id/team5Name"
+                app:layout_constraintStart_toStartOf="@+id/team5Name"
+                app:layout_constraintTop_toTopOf="@+id/team3Image" />
+
+            <TextView
+                android:id="@+id/team54Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team4Image"
+                app:layout_constraintEnd_toEndOf="@id/team5Name"
+                app:layout_constraintStart_toStartOf="@+id/team5Name"
+                app:layout_constraintTop_toTopOf="@+id/team4Image" />
+
+            <TextView
+                android:id="@+id/team55Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:text="_7"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/team5Image"
+                app:layout_constraintEnd_toEndOf="@id/team5Name"
+                app:layout_constraintStart_toStartOf="@+id/team5Name"
+                app:layout_constraintTop_toTopOf="@+id/team5Image" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

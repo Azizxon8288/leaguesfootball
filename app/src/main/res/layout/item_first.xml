@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/image1view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toTopOf="@id/card"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/league_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingHorizontal="10dp"
+        android:text="La Liga"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/image1view"
+        app:layout_constraintLeft_toRightOf="@id/image1view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/league_country_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingHorizontal="10dp"
+        android:text="Spain"
+        android:textColor="#717171"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/image1view"
+        app:layout_constraintLeft_toRightOf="@id/image1view"
+        app:layout_constraintTop_toBottomOf="@id/league_name_tv" />
+
+    <ImageButton
+        android:id="@+id/all_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#2D2D2D"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image1view">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Team"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/point_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Pts"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/gd_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="L"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@id/point_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ga_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="D"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@id/gd_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/l_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="W"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@id/ga_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/d_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="P"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toLeftOf="@id/l_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_second"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/team" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/image1"-->
+            <!--                android:layout_width="25dp"-->
+            <!--                android:layout_height="25dp"-->
+            <!--                android:layout_marginStart="20dp"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/image2"-->
+            <!--                android:src="@drawable/ic_launcher_background"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/team" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/sa1"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:paddingHorizontal="10dp"-->
+            <!--                android:text="Real Madrid"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@id/image1"-->
+            <!--                app:layout_constraintLeft_toRightOf="@id/image1"-->
+            <!--                app:layout_constraintTop_toTopOf="@id/image1" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/point1"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/point2"-->
+            <!--                android:text="Pts"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/point_tv" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/gd1"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/gd2"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="Gd"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/point1"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/gd_tv" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/ga1"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/ga2"-->
+            <!--                android:text="Ga"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/gd1"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/ga_tv" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/l1"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/l2"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="L"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/ga1"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/l_tv" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/d1"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="D"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/d2"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/l1"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/d_tv" />-->
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/image2"-->
+            <!--                android:layout_width="25dp"-->
+            <!--                android:layout_height="25dp"-->
+            <!--                android:layout_marginStart="20dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:src="@drawable/ic_launcher_background"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/image3"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/image1" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/sa2"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:paddingHorizontal="10dp"-->
+            <!--                android:text="Real Madrid"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@id/image2"-->
+            <!--                app:layout_constraintLeft_toRightOf="@id/image2"-->
+            <!--                app:layout_constraintTop_toTopOf="@id/image2" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/point2"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/point3"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="Pts"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/point1" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/gd2"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="Gd"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/gd3"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/point2"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/gd1" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/ga2"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/ga3"-->
+            <!--                android:text="Ga"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/gd2"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/ga1" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/l2"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="L"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/l3"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/ga2"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/l1" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/d2"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="D"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/d3"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/l2"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/d1" />-->
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/image3"-->
+            <!--                android:layout_width="25dp"-->
+            <!--                android:layout_height="25dp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/image4"-->
+            <!--                android:layout_marginStart="20dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:src="@drawable/ic_launcher_background"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/image2" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/sa3"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:paddingHorizontal="10dp"-->
+            <!--                android:text="Real Madrid"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@id/image3"-->
+            <!--                app:layout_constraintLeft_toRightOf="@id/image3"-->
+            <!--                app:layout_constraintTop_toTopOf="@id/image3" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/point3"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/point4"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="Pts"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/point2" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/gd3"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/gd4"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="Gd"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/point3"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/gd2" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/ga3"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/ga4"-->
+            <!--                android:text="Ga"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/gd3"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/ga2" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/l3"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/l4"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="L"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/ga3"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/l2" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/d3"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="D"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/d4"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/l3"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/d2" />-->
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/image4"-->
+            <!--                android:layout_width="25dp"-->
+            <!--                android:layout_height="25dp"-->
+            <!--                android:layout_marginStart="20dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                android:src="@drawable/ic_launcher_background"-->
+            <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/image3" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/sa4"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:paddingHorizontal="10dp"-->
+            <!--                android:text="Real Madrid"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="@id/image4"-->
+            <!--                app:layout_constraintLeft_toRightOf="@id/image4"-->
+            <!--                app:layout_constraintTop_toTopOf="@id/image4" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/point4"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="Pts"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/point3" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/gd4"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                android:text="Gd"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/point4"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/gd3" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/ga4"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="Ga"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/gd4"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/ga3" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/l4"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                android:text="L"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/ga4"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/l3" />-->
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/d4"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:layout_marginEnd="20dp"-->
+            <!--                android:text="D"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintRight_toLeftOf="@id/l4"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/d3" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
